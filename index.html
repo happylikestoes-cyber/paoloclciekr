@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paolo Clicker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <img class="pixel-bg" src="assets/cofounder-2-hero.gif" alt="" aria-hidden="true" />
+      <span class="ribbon ribbon-a"></span>
+      <span class="ribbon ribbon-b"></span>
+      <span class="ribbon ribbon-c"></span>
+      <img class="anime-bg anime-bg-girl" src="assets/anime-girl.png" alt="" aria-hidden="true" />
+      <span class="dream-spark spark-a"></span>
+      <span class="dream-spark spark-b"></span>
+      <span class="dream-spark spark-c"></span>
+      <span class="dream-spark spark-d"></span>
+      <span class="dream-spark spark-e"></span>
+      <span class="dream-spark spark-f"></span>
+      <span class="grain"></span>
+    </div>
+
+    <div class="combo-cameo" id="comboCameo" aria-hidden="true">
+      <span class="combo-cameo-glow"></span>
+      <img data-src="assets/combo-angel.png" alt="" draggable="false" />
+    </div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Paolo Clicker home">
+          <span class="brand-mark">PC</span>
+          <span>
+            <strong>Paolo Clicker</strong>
+            <small>Soft tap dream</small>
+          </span>
+        </a>
+        <button class="reset-button" id="resetButton" type="button" title="Reset game">
+          Reset
+        </button>
+      </header>
+
+      <section class="hero-grid" aria-label="Paolo Clicker game">
+        <section class="score-surface" aria-live="polite">
+          <p class="eyebrow">Paolo Glow</p>
+          <h1 id="score">0</h1>
+          <div class="stat-row">
+            <span id="perClick">+1 per click</span>
+            <span id="perSecond">0/sec</span>
+            <span id="comboLabel">x1.00 combo</span>
+          </div>
+        </section>
+
+        <section class="click-stage">
+          <button class="paolo-button" id="paoloButton" type="button" aria-label="Click Paolo">
+            <span class="button-halo"></span>
+            <img class="button-cat-ears" src="assets/cat-ears.png" alt="" aria-hidden="true" draggable="false" />
+            <span class="button-sheen"></span>
+            <img id="paoloImage" src="img1.jpg" alt="Paolo" draggable="false" />
+            <span class="fallback-face">Paolo</span>
+            <span class="cheek cheek-left"></span>
+            <span class="cheek cheek-right"></span>
+            <span class="whiskers whiskers-left"></span>
+            <span class="whiskers whiskers-right"></span>
+            <span class="button-rim"></span>
+          </button>
+          <div class="combo-track" aria-hidden="true">
+            <span id="comboFill"></span>
+          </div>
+        </section>
+      </section>
+
+      <section class="control-grid">
+        <section class="upgrade-zone" aria-labelledby="upgradeHeading">
+          <div class="section-heading">
+            <p class="eyebrow">Studio</p>
+            <h2 id="upgradeHeading">Upgrades</h2>
+          </div>
+          <div class="upgrade-list" id="upgradeList"></div>
+        </section>
+
+        <section class="look-zone" aria-labelledby="lookHeading">
+          <div class="section-heading">
+            <p class="eyebrow">Gallery</p>
+            <h2 id="lookHeading">Looks</h2>
+          </div>
+          <div class="skin-strip" id="skinStrip" aria-label="Paolo images"></div>
+          <div class="milestone-panel">
+            <span class="milestone-number" id="levelLabel">Level 1</span>
+            <span class="milestone-copy" id="milestoneCopy">First glow unlocked</span>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <template id="upgradeTemplate">
+      <article class="upgrade-card">
+        <div>
+          <h3></h3>
+          <p></p>
+        </div>
+        <button type="button">
+          <span class="cost"></span>
+          <span class="owned"></span>
+        </button>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
